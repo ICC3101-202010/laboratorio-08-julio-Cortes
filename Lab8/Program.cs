@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Lab8.Controladores;
+using System;
 using System.Windows.Forms;
 
 namespace Lab8
@@ -16,7 +14,12 @@ namespace Lab8
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 form1 = new Form1();
+            StoreController store = new StoreController(form1);
+            RestaurantController restaurant = new RestaurantController(form1);
+            CinemaController cinema = new CinemaController(form1);
+            RecreationalController recreational = new RecreationalController(form1);
+            Application.Run(form1);
         }
     }
 }

@@ -51,6 +51,10 @@
     <Compile Include="Controladores\RecreationalController.cs" />
     <Compile Include="Controladores\RestaurantController.cs" />
     <Compile Include="Controladores\StoreController.cs" />
+    <Compile Include="CreateCinemaArgs.cs" />
+    <Compile Include="CreateRecreationalArgs.cs" />
+    <Compile Include="CreateRestaurantArgs.cs" />
+    <Compile Include="CreateStoreArgs.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

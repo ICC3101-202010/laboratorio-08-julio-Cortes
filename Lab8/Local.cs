@@ -17,5 +17,9 @@ namespace Lab8
             this.id = id;
             this.schedule = schedule;
         }
+
+        public string Owner { get => owner; set => owner = value; }
+        public int Id { get => id; set => id = value; }
+        public string Schedule { get => schedule; set => schedule = value; }
     }
 }

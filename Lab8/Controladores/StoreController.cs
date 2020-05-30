@@ -1,12 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab8.Controladores
 {
-    class StoreController
+    public class StoreController
     {
+        private List<Store> stores= new List<Store>();
+        Form1 form1;
+        public StoreController(Form1 form1)
+        {
+            this.form1 = form1;
+            this.form1.FinalAddStoreClick += OnFinalAddStoreClick;
+        }
+
+        public List<Store> Stores { get => stores; set => stores = value; }
+
+        private bool OnFinalAddStoreClick(object sender, CreateStoreArgs e)
+        {
+            Store store = null;
+            store = Stores.Where(u =>u.Id==e.id).FirstOrDefault();
+            if (store is null)
+            {
+                stores.Add(new Store(e.ownername, e.id, e.schedule, e.category));
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
+
 }

@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace Lab8.Controladores
 {
-    class CinemaController
+    public class CinemaController
     {
+        private List<Cinema> cinemas = new List<Cinema>();
+        Form1 form1;
+        public CinemaController(Form1 form1)
+        {
+            this.form1 = form1;
+            this.form1.FinalAddCinemaClick += OnFinalAddCinemaClick;
+        }
+
+        public List<Cinema> Cinemas { get => cinemas; set => cinemas = value; }
+
+        private bool OnFinalAddCinemaClick(object source, CreateCinemaArgs args)
+        {
+            Cinema cinema = null;
+            cinema = Cinemas.Where(u => u.Id == args.id).FirstOrDefault();
+            if (cinema is null)
+            {
+                cinemas.Add(new Cinema(args.ownername, args.id, args.schedule, args.nrooms));
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
