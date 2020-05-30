@@ -97,13 +97,13 @@ namespace Lab8
             string schedule = StoreSheduleLabel.Text;
             string category = StoreCategoryLabel.Text;
             bool succes = int.TryParse(StoreIDLabel.Text, out id);
-            if (succes)
+            if (succes&&id>=1)
             {
                 OnFinalAddStore(ownername, id, schedule, category);
             }
             else
             {
-                StoreIDLabel.Text = "Invalid Format, please put a number in this box";
+                StoreIDLabel.Text = "Invalid Format, please put a positive number in this box";
             }
         }
 
@@ -136,17 +136,17 @@ namespace Lab8
             bool privatet;
             bool succes = int.TryParse(RestaurantIDTextBox.Text, out id);
             bool succes2 = bool.TryParse(RestaurantPrivateTextBox.Text, out privatet);
-            if (succes&&succes2)
+            if (succes&&succes2&&id>=0)
             {
                 OnFinalAddRestaurant(name, id, schedule, privatet);
             }
             else if(succes)
             {
-                RestaurantPrivateTextBox.Text = "Invalid Format, please put a number in this box";
+                RestaurantPrivateTextBox.Text = "Invalid Format, please put [True] or [False] in this box";
             }
-            else
+            if (id <= 0)
             {
-                RestaurantIDTextBox.Text = "Invalid Format";
+                RestaurantIDTextBox.Text = "Invalid Format, please put a positive number in this box";
             }
         }
         private void OnFinalAddRestaurant(string ownername, int id, string schedule, bool privatet)
@@ -178,17 +178,17 @@ namespace Lab8
             int nrooms;
             bool succes = int.TryParse(CinemaIDTextBox.Text, out id);
             bool succes2 = int.TryParse(CinemaNofRoomsLabel.Text, out nrooms);
-            if (succes && succes2)
+            if (succes && succes2&&id>=1&&nrooms>=1)
             {
                 OnFinalAddCinema(name, id, schedule, nrooms);
             }
-            else if (succes)
+            else if (succes&& nrooms <= 0)
             {
-                CinemaNofRoomsLabel.Text = "Invalid Format, please put a number in this box";
+                CinemaNofRoomsLabel.Text = "Invalid Format, please put a positive number in this box";
             }
-            else
+            if (id <= 0)
             {
-                CinemaIDTextBox.Text = "Invalid Format, please put a number in this box";
+                CinemaIDTextBox.Text = "Invalid Format, please put a positive number in this box";
             }
         }
 
@@ -219,13 +219,13 @@ namespace Lab8
             int id;
             string schedule = RecreationalScheduleTextBox.Text;
             bool succes = int.TryParse(RecreationalIDTextBox.Text, out id);
-            if (succes)
+            if (succes&&id>=1)
             {
                 OnFinalAddRecreational(name, id, schedule);
             }
             else 
             {
-                CinemaIDTextBox.Text = "Invalid Format, please put a number in this box";
+                RecreationalIDTextBox.Text = "Invalid Format, please put a positive number in this box";
             }
 
         }

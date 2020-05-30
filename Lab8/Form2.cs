@@ -23,6 +23,10 @@ namespace Lab8
             this.restaurants = restaurants;
             this.cinemas = cinemas;
             this.recreationals = recreationals;
+            StoresData.Dock= System.Windows.Forms.DockStyle.Fill;
+            RecreationalData.Dock = System.Windows.Forms.DockStyle.Fill;
+            RestaurantsData.Dock = System.Windows.Forms.DockStyle.Fill;
+            CinemaData.Dock = System.Windows.Forms.DockStyle.Fill;
         }
 
         private void Form2_Load(object sender, EventArgs e)

@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BasePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.PhotoPanel = new System.Windows.Forms.Panel();
-            this.AddLocal = new System.Windows.Forms.Button();
-            this.ViewLocals = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.AddPanel = new System.Windows.Forms.Panel();
             this.AddHolder = new System.Windows.Forms.Panel();
             this.StorePanel = new System.Windows.Forms.TableLayoutPanel();
@@ -82,7 +79,9 @@
             this.AddRestaurantButton = new System.Windows.Forms.Button();
             this.AddCinemaButton = new System.Windows.Forms.Button();
             this.AddStoreButton = new System.Windows.Forms.Button();
-            this.BasePanel.SuspendLayout();
+            this.BasePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.AddLocal = new System.Windows.Forms.Button();
+            this.ViewLocals = new System.Windows.Forms.Button();
             this.AddPanel.SuspendLayout();
             this.AddHolder.SuspendLayout();
             this.StorePanel.SuspendLayout();
@@ -90,72 +89,14 @@
             this.RestaurantPanel.SuspendLayout();
             this.CinemaPanel.SuspendLayout();
             this.TopBottonHolder.SuspendLayout();
+            this.BasePanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BasePanel
-            // 
-            this.BasePanel.BackColor = System.Drawing.Color.DimGray;
-            this.BasePanel.ColumnCount = 1;
-            this.BasePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.BasePanel.Controls.Add(this.PhotoPanel, 0, 0);
-            this.BasePanel.Controls.Add(this.AddLocal, 0, 1);
-            this.BasePanel.Controls.Add(this.ViewLocals, 0, 2);
-            this.BasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BasePanel.Location = new System.Drawing.Point(0, 0);
-            this.BasePanel.Name = "BasePanel";
-            this.BasePanel.RowCount = 4;
-            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BasePanel.Size = new System.Drawing.Size(800, 450);
-            this.BasePanel.TabIndex = 0;
-            // 
-            // PhotoPanel
-            // 
-            this.PhotoPanel.BackColor = System.Drawing.Color.DimGray;
-            this.PhotoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhotoPanel.Location = new System.Drawing.Point(3, 3);
-            this.PhotoPanel.Name = "PhotoPanel";
-            this.PhotoPanel.Size = new System.Drawing.Size(794, 219);
-            this.PhotoPanel.TabIndex = 3;
-            // 
-            // AddLocal
-            // 
-            this.AddLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AddLocal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddLocal.FlatAppearance.BorderSize = 0;
-            this.AddLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLocal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AddLocal.Location = new System.Drawing.Point(3, 228);
-            this.AddLocal.Name = "AddLocal";
-            this.AddLocal.Size = new System.Drawing.Size(794, 84);
-            this.AddLocal.TabIndex = 0;
-            this.AddLocal.Text = "Add new premise";
-            this.AddLocal.UseVisualStyleBackColor = false;
-            this.AddLocal.Click += new System.EventHandler(this.AddLocal_ButtonClick);
-            // 
-            // ViewLocals
-            // 
-            this.ViewLocals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ViewLocals.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewLocals.FlatAppearance.BorderSize = 0;
-            this.ViewLocals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ViewLocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.ViewLocals.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ViewLocals.Location = new System.Drawing.Point(3, 318);
-            this.ViewLocals.Name = "ViewLocals";
-            this.ViewLocals.Size = new System.Drawing.Size(794, 84);
-            this.ViewLocals.TabIndex = 2;
-            this.ViewLocals.Text = "View current premises";
-            this.ViewLocals.UseVisualStyleBackColor = false;
-            this.ViewLocals.Click += new System.EventHandler(this.ViewLocals_Click);
             // 
             // AddPanel
             // 
             this.AddPanel.BackColor = System.Drawing.Color.DimGray;
+            this.AddPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddPanel.BackgroundImage")));
+            this.AddPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddPanel.Controls.Add(this.AddHolder);
             this.AddPanel.Controls.Add(this.TopBottonHolder);
             this.AddPanel.Location = new System.Drawing.Point(276, 15);
@@ -178,7 +119,8 @@
             // 
             // StorePanel
             // 
-            this.StorePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.StorePanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
+            this.StorePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.StorePanel.ColumnCount = 4;
             this.StorePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.StorePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -318,6 +260,8 @@
             // 
             // RecreationalPanel
             // 
+            this.RecreationalPanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
+            this.RecreationalPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RecreationalPanel.ColumnCount = 4;
             this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -435,6 +379,8 @@
             // 
             // RestaurantPanel
             // 
+            this.RestaurantPanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
+            this.RestaurantPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RestaurantPanel.ColumnCount = 4;
             this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -574,6 +520,8 @@
             // 
             // CinemaPanel
             // 
+            this.CinemaPanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
+            this.CinemaPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CinemaPanel.ColumnCount = 4;
             this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -807,6 +755,58 @@
             this.AddStoreButton.UseVisualStyleBackColor = false;
             this.AddStoreButton.Click += new System.EventHandler(this.AddStoreButton_Click);
             // 
+            // BasePanel
+            // 
+            this.BasePanel.BackColor = System.Drawing.Color.DimGray;
+            this.BasePanel.BackgroundImage = global::Lab8.Properties.Resources.mall;
+            this.BasePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BasePanel.ColumnCount = 1;
+            this.BasePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.BasePanel.Controls.Add(this.AddLocal, 0, 1);
+            this.BasePanel.Controls.Add(this.ViewLocals, 0, 2);
+            this.BasePanel.Location = new System.Drawing.Point(43, 15);
+            this.BasePanel.Name = "BasePanel";
+            this.BasePanel.RowCount = 4;
+            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BasePanel.Size = new System.Drawing.Size(177, 100);
+            this.BasePanel.TabIndex = 0;
+            // 
+            // AddLocal
+            // 
+            this.AddLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddLocal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddLocal.FlatAppearance.BorderSize = 0;
+            this.AddLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddLocal.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddLocal.Location = new System.Drawing.Point(3, 53);
+            this.AddLocal.Name = "AddLocal";
+            this.AddLocal.Size = new System.Drawing.Size(171, 14);
+            this.AddLocal.TabIndex = 0;
+            this.AddLocal.Text = "Add new premise";
+            this.AddLocal.UseVisualStyleBackColor = false;
+            this.AddLocal.Click += new System.EventHandler(this.AddLocal_ButtonClick);
+            // 
+            // ViewLocals
+            // 
+            this.ViewLocals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ViewLocals.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewLocals.FlatAppearance.BorderSize = 0;
+            this.ViewLocals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ViewLocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.ViewLocals.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ViewLocals.Location = new System.Drawing.Point(3, 73);
+            this.ViewLocals.Name = "ViewLocals";
+            this.ViewLocals.Size = new System.Drawing.Size(171, 14);
+            this.ViewLocals.TabIndex = 2;
+            this.ViewLocals.Text = "View current premises";
+            this.ViewLocals.UseVisualStyleBackColor = false;
+            this.ViewLocals.Click += new System.EventHandler(this.ViewLocals_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -816,7 +816,6 @@
             this.Controls.Add(this.BasePanel);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.BasePanel.ResumeLayout(false);
             this.AddPanel.ResumeLayout(false);
             this.AddHolder.ResumeLayout(false);
             this.StorePanel.ResumeLayout(false);
@@ -828,6 +827,7 @@
             this.CinemaPanel.ResumeLayout(false);
             this.CinemaPanel.PerformLayout();
             this.TopBottonHolder.ResumeLayout(false);
+            this.BasePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -837,7 +837,6 @@
         private System.Windows.Forms.TableLayoutPanel BasePanel;
         private System.Windows.Forms.Button AddLocal;
         private System.Windows.Forms.Button ViewLocals;
-        private System.Windows.Forms.Panel PhotoPanel;
         private System.Windows.Forms.Panel AddPanel;
         private System.Windows.Forms.Panel AddHolder;
         private System.Windows.Forms.TableLayoutPanel TopBottonHolder;
