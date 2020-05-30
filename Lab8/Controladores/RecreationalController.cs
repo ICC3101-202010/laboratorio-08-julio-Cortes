@@ -14,7 +14,14 @@ namespace Lab8.Controladores
         {
             this.form1 = form1;
             this.form1.FinalAddRecreationalClick += OnFinalAddRecreationalClick;
+            this.form1.LoadRecreational += OnLoadRecreational;
         }
+
+        private List<Recreational> OnLoadRecreational(object source, LocalInfoArgs args)
+        {
+            return recreationals;
+        }
+
         public List<Recreational> Recreationals { get => recreationals; set => recreationals = value; }
         private bool OnFinalAddRecreationalClick(object source, CreateRecreationalArgs args)
         {

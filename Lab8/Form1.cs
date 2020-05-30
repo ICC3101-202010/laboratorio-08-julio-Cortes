@@ -22,6 +22,16 @@ namespace Lab8
         public event CreateRecreatinalEventHander FinalAddRecreationalClick;
 
 
+        public delegate List<Store> StoreInfoEventHandler(object source, LocalInfoArgs args);
+        public delegate List<Restaurant> RestaurantInfoEventHandler(object source, LocalInfoArgs args);
+        public delegate List<Recreational> RecreationalInfoEventHandler(object source, LocalInfoArgs args);
+        public delegate List<Cinema> CinemaInfoEventHandler(object source, LocalInfoArgs args);
+
+        public event RestaurantInfoEventHandler LoadRestaurant;
+        public event StoreInfoEventHandler LoadStores;
+        public event CinemaInfoEventHandler LoadCinema;
+        public event RecreationalInfoEventHandler LoadRecreational;
+
 
 
         public Form1()
@@ -32,6 +42,7 @@ namespace Lab8
             RestaurantPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             RecreationalPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             BasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            AddPanel.Dock= System.Windows.Forms.DockStyle.Fill;
         }
 
         private void AddStoreButton_Click(object sender, EventArgs e)
@@ -103,6 +114,7 @@ namespace Lab8
                 bool result=FinalAddStoreClick(this, new CreateStoreArgs() { ownername = ownername, id = id, schedule = schedule, category = category });
                 if (result)
                 {
+                    UsedIdStore.Visible = false;
                     StorePanel.Visible = false;
                     StoreNameTextBox.Text = "";
                     StoreSheduleLabel.Text = "";
@@ -111,7 +123,7 @@ namespace Lab8
                 }
                 else
                 {
-                    //Anadir id usado
+                    UsedIdStore.Visible = true;
                 }
             }
         }
@@ -130,11 +142,11 @@ namespace Lab8
             }
             else if(succes)
             {
-                RestaurantIDTextBox.Text = "Invalid Format, please put a number in this box";
+                RestaurantPrivateTextBox.Text = "Invalid Format, please put a number in this box";
             }
             else
             {
-                RestaurantPrivateTextBox.Text = "Invalid Format";
+                RestaurantIDTextBox.Text = "Invalid Format";
             }
         }
         private void OnFinalAddRestaurant(string ownername, int id, string schedule, bool privatet)
@@ -144,6 +156,7 @@ namespace Lab8
                 bool result = FinalAddRestaurantClick(this, new CreateRestaurantArgs() { ownername = ownername, id = id, schedule = schedule, privatet = privatet });
                 if (result)
                 {
+                    UsedIdRestaurantLabel.Visible = false;
                     RestaurantPanel.Visible = false;
                     RestaurantIDTextBox.Text = "";
                     RestaurantNameTextBox.Text = "";
@@ -152,7 +165,7 @@ namespace Lab8
                 }
                 else
                 {
-                    //Anadir id usado
+                    UsedIdRestaurantLabel.Visible = true;
                 }
             }
         }
@@ -171,11 +184,11 @@ namespace Lab8
             }
             else if (succes)
             {
-                CinemaIDTextBox.Text = "Invalid Format, please put a number in this box";
+                CinemaNofRoomsLabel.Text = "Invalid Format, please put a number in this box";
             }
             else
             {
-                CinemaNofRoomsLabel.Text = "Invalid Format, please put a number in this box";
+                CinemaIDTextBox.Text = "Invalid Format, please put a number in this box";
             }
         }
 
@@ -186,6 +199,7 @@ namespace Lab8
                 bool result = FinalAddCinemaClick(this, new CreateCinemaArgs() { ownername = name, id = id, schedule = schedule, nrooms = nrooms });
                 if (result)
                 {
+                    UsedIdCinemaLabel.Visible = false;
                     CinemaPanel.Visible = false;
                     CinemaIDTextBox.Text = "";
                     CinemaNameTextBox.Text = "";
@@ -194,7 +208,7 @@ namespace Lab8
                 }
                 else
                 {
-                    //Anadir id usado
+                    UsedIdCinemaLabel.Visible = true;
                 }
             }
         }
@@ -223,6 +237,7 @@ namespace Lab8
                 bool result = FinalAddRecreationalClick(this, new CreateRecreationalArgs() { ownername = name, id = id, schedule = schedule });
                 if (result)
                 {
+                    UsedIdRecreationalLabel.Visible = false;
                     RecreationalPanel.Visible = false;
                     RecreationalNameTextBox.Text = "";
                     RecreationalScheduleTextBox.Text = "";
@@ -230,9 +245,57 @@ namespace Lab8
                 }
                 else
                 {
-                    //Anadir id usado
+                    UsedIdRecreationalLabel.Visible = true;
                 }
             }
         }
+
+        private void ViewLocals_Click(object sender, EventArgs e)
+        {
+            List<Restaurant> restaurants=OnLoadRestaurant();
+            List<Cinema> cinemas= OnLoadCinema();
+            List<Recreational> recreationals = OnLoadRecreational();
+            List<Store> stores = OnLoadStores();
+            Form2 form2 = new Form2(stores,restaurants, cinemas, recreationals);
+            form2.ShowDialog();
+        }
+
+        private List<Restaurant> OnLoadRestaurant()
+        {
+            if (LoadRestaurant != null)
+            {
+                return LoadRestaurant(this,new LocalInfoArgs());
+            }
+            return null;
+        }
+
+        private List<Cinema> OnLoadCinema()
+        {
+            if (LoadCinema != null)
+            {
+                return LoadCinema(this, new LocalInfoArgs());
+            }
+            return null;
+        }
+
+        private List<Recreational> OnLoadRecreational()
+        {
+            if (LoadRecreational != null)
+            {
+                return LoadRecreational(this, new LocalInfoArgs());
+            }
+            return null;
+        }
+
+        private List<Store> OnLoadStores()
+        {
+            if (LoadStores != null)
+            {
+                return LoadStores(this, new LocalInfoArgs());
+            }
+            return null;
+        }
+
+
     }
 }

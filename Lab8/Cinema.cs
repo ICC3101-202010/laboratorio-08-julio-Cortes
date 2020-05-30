@@ -11,7 +11,9 @@ namespace Lab8
         private int TheatherRooms;
         public Cinema(string owner, int id, string schedule, int TheatherRooms) : base(owner, id, schedule)
         {
-            this.TheatherRooms = TheatherRooms;
+            this.TheatherRooms1 = TheatherRooms;
         }
+
+        public int TheatherRooms1 { get => TheatherRooms; set => TheatherRooms = value; }
     }
 }

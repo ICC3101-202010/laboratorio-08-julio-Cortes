@@ -11,7 +11,9 @@ namespace Lab8
         private bool privatetables;
         public Restaurant(string owner, int id, string schedule, bool privatetables):base(owner,id,schedule)
         {
-            this.privatetables = privatetables;
+            this.Privatetables = privatetables;
         }
+
+        public bool Privatetables { get => privatetables; set => privatetables = value; }
     }
 }

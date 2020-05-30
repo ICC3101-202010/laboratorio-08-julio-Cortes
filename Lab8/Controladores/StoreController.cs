@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Lab8.Controladores
@@ -11,6 +12,12 @@ namespace Lab8.Controladores
         {
             this.form1 = form1;
             this.form1.FinalAddStoreClick += OnFinalAddStoreClick;
+            this.form1.LoadStores += OnLoadStores;
+        }
+
+        private List<Store> OnLoadStores(object source, LocalInfoArgs args)
+        {
+            return stores;
         }
 
         public List<Store> Stores { get => stores; set => stores = value; }

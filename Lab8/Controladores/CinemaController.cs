@@ -14,6 +14,12 @@ namespace Lab8.Controladores
         {
             this.form1 = form1;
             this.form1.FinalAddCinemaClick += OnFinalAddCinemaClick;
+            this.form1.LoadCinema += OnLoadCinema;
+        }
+
+        private List<Cinema> OnLoadCinema(object source, LocalInfoArgs args)
+        {
+            return cinemas;
         }
 
         public List<Cinema> Cinemas { get => cinemas; set => cinemas = value; }

@@ -29,40 +29,11 @@
         private void InitializeComponent()
         {
             this.BasePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.AddLocal = new System.Windows.Forms.Button();
-            this.LocalInfo = new System.Windows.Forms.Button();
-            this.ViewLocals = new System.Windows.Forms.Button();
             this.PhotoPanel = new System.Windows.Forms.Panel();
+            this.AddLocal = new System.Windows.Forms.Button();
+            this.ViewLocals = new System.Windows.Forms.Button();
             this.AddPanel = new System.Windows.Forms.Panel();
             this.AddHolder = new System.Windows.Forms.Panel();
-            this.RecreationalPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.RecreationalNameLabel = new System.Windows.Forms.Label();
-            this.RecreationalIDLabel = new System.Windows.Forms.Label();
-            this.RecreationalScheduleLabel = new System.Windows.Forms.Label();
-            this.RecreationalNameTextBox = new System.Windows.Forms.TextBox();
-            this.RecreationalIDTextBox = new System.Windows.Forms.TextBox();
-            this.RecreationalScheduleTextBox = new System.Windows.Forms.TextBox();
-            this.FinalAddRecreational = new System.Windows.Forms.Button();
-            this.RestaurantPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.RestaurantNameLabel = new System.Windows.Forms.Label();
-            this.RestaurantIdLabel = new System.Windows.Forms.Label();
-            this.RestaurantScheduleLabel = new System.Windows.Forms.Label();
-            this.RestaurantPrivateLabel = new System.Windows.Forms.Label();
-            this.RestaurantNameTextBox = new System.Windows.Forms.TextBox();
-            this.RestaurantIDTextBox = new System.Windows.Forms.TextBox();
-            this.RestaurantScheduleTextBox = new System.Windows.Forms.TextBox();
-            this.RestaurantPrivateTextBox = new System.Windows.Forms.TextBox();
-            this.FinalAddRestaurant = new System.Windows.Forms.Button();
-            this.CinemaPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.CinemaOwnerLabel = new System.Windows.Forms.Label();
-            this.CinemaIDLabel = new System.Windows.Forms.Label();
-            this.CinemaScheduleLabel = new System.Windows.Forms.Label();
-            this.CinemaRoomsLabel = new System.Windows.Forms.Label();
-            this.CinemaNameTextBox = new System.Windows.Forms.TextBox();
-            this.CinemaIDTextBox = new System.Windows.Forms.TextBox();
-            this.CinemaScheduleTextBox = new System.Windows.Forms.TextBox();
-            this.CinemaNofRoomsLabel = new System.Windows.Forms.TextBox();
-            this.FinalAddCinema = new System.Windows.Forms.Button();
             this.StorePanel = new System.Windows.Forms.TableLayoutPanel();
             this.OwnerLableStore = new System.Windows.Forms.Label();
             this.IdLabelStore = new System.Windows.Forms.Label();
@@ -73,6 +44,38 @@
             this.StoreSheduleLabel = new System.Windows.Forms.TextBox();
             this.StoreCategoryLabel = new System.Windows.Forms.TextBox();
             this.FinalAddStore = new System.Windows.Forms.Button();
+            this.UsedIdStore = new System.Windows.Forms.Label();
+            this.RecreationalPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.RecreationalNameLabel = new System.Windows.Forms.Label();
+            this.RecreationalIDLabel = new System.Windows.Forms.Label();
+            this.RecreationalScheduleLabel = new System.Windows.Forms.Label();
+            this.RecreationalNameTextBox = new System.Windows.Forms.TextBox();
+            this.RecreationalIDTextBox = new System.Windows.Forms.TextBox();
+            this.RecreationalScheduleTextBox = new System.Windows.Forms.TextBox();
+            this.FinalAddRecreational = new System.Windows.Forms.Button();
+            this.UsedIdRecreationalLabel = new System.Windows.Forms.Label();
+            this.RestaurantPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.RestaurantNameLabel = new System.Windows.Forms.Label();
+            this.RestaurantIdLabel = new System.Windows.Forms.Label();
+            this.RestaurantScheduleLabel = new System.Windows.Forms.Label();
+            this.RestaurantPrivateLabel = new System.Windows.Forms.Label();
+            this.RestaurantNameTextBox = new System.Windows.Forms.TextBox();
+            this.RestaurantIDTextBox = new System.Windows.Forms.TextBox();
+            this.RestaurantScheduleTextBox = new System.Windows.Forms.TextBox();
+            this.RestaurantPrivateTextBox = new System.Windows.Forms.TextBox();
+            this.FinalAddRestaurant = new System.Windows.Forms.Button();
+            this.UsedIdRestaurantLabel = new System.Windows.Forms.Label();
+            this.CinemaPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.CinemaOwnerLabel = new System.Windows.Forms.Label();
+            this.CinemaIDLabel = new System.Windows.Forms.Label();
+            this.CinemaScheduleLabel = new System.Windows.Forms.Label();
+            this.CinemaRoomsLabel = new System.Windows.Forms.Label();
+            this.CinemaNameTextBox = new System.Windows.Forms.TextBox();
+            this.CinemaIDTextBox = new System.Windows.Forms.TextBox();
+            this.CinemaScheduleTextBox = new System.Windows.Forms.TextBox();
+            this.CinemaNofRoomsLabel = new System.Windows.Forms.TextBox();
+            this.FinalAddCinema = new System.Windows.Forms.Button();
+            this.UsedIdCinemaLabel = new System.Windows.Forms.Label();
             this.TopBottonHolder = new System.Windows.Forms.TableLayoutPanel();
             this.BackButtomAdding = new System.Windows.Forms.Button();
             this.AddRecreationalButton = new System.Windows.Forms.Button();
@@ -82,10 +85,10 @@
             this.BasePanel.SuspendLayout();
             this.AddPanel.SuspendLayout();
             this.AddHolder.SuspendLayout();
+            this.StorePanel.SuspendLayout();
             this.RecreationalPanel.SuspendLayout();
             this.RestaurantPanel.SuspendLayout();
             this.CinemaPanel.SuspendLayout();
-            this.StorePanel.SuspendLayout();
             this.TopBottonHolder.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,20 +97,29 @@
             this.BasePanel.BackColor = System.Drawing.Color.DimGray;
             this.BasePanel.ColumnCount = 1;
             this.BasePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.BasePanel.Controls.Add(this.AddLocal, 0, 1);
-            this.BasePanel.Controls.Add(this.LocalInfo, 0, 2);
-            this.BasePanel.Controls.Add(this.ViewLocals, 0, 3);
             this.BasePanel.Controls.Add(this.PhotoPanel, 0, 0);
-            this.BasePanel.Location = new System.Drawing.Point(38, 12);
+            this.BasePanel.Controls.Add(this.AddLocal, 0, 1);
+            this.BasePanel.Controls.Add(this.ViewLocals, 0, 2);
+            this.BasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BasePanel.Location = new System.Drawing.Point(0, 0);
             this.BasePanel.Name = "BasePanel";
-            this.BasePanel.RowCount = 5;
-            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.BasePanel.RowCount = 4;
+            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.BasePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BasePanel.Size = new System.Drawing.Size(200, 100);
+            this.BasePanel.Size = new System.Drawing.Size(800, 450);
             this.BasePanel.TabIndex = 0;
+            // 
+            // PhotoPanel
+            // 
+            this.PhotoPanel.BackColor = System.Drawing.Color.DimGray;
+            this.PhotoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhotoPanel.Location = new System.Drawing.Point(3, 3);
+            this.PhotoPanel.Name = "PhotoPanel";
+            this.PhotoPanel.Size = new System.Drawing.Size(794, 219);
+            this.PhotoPanel.TabIndex = 3;
             // 
             // AddLocal
             // 
@@ -117,28 +129,13 @@
             this.AddLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddLocal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AddLocal.Location = new System.Drawing.Point(3, 35);
+            this.AddLocal.Location = new System.Drawing.Point(3, 228);
             this.AddLocal.Name = "AddLocal";
-            this.AddLocal.Size = new System.Drawing.Size(194, 10);
+            this.AddLocal.Size = new System.Drawing.Size(794, 84);
             this.AddLocal.TabIndex = 0;
             this.AddLocal.Text = "Add new premise";
             this.AddLocal.UseVisualStyleBackColor = false;
             this.AddLocal.Click += new System.EventHandler(this.AddLocal_ButtonClick);
-            // 
-            // LocalInfo
-            // 
-            this.LocalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LocalInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LocalInfo.FlatAppearance.BorderSize = 0;
-            this.LocalInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LocalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.LocalInfo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LocalInfo.Location = new System.Drawing.Point(3, 51);
-            this.LocalInfo.Name = "LocalInfo";
-            this.LocalInfo.Size = new System.Drawing.Size(194, 10);
-            this.LocalInfo.TabIndex = 1;
-            this.LocalInfo.Text = "View current premises information";
-            this.LocalInfo.UseVisualStyleBackColor = false;
             // 
             // ViewLocals
             // 
@@ -148,401 +145,40 @@
             this.ViewLocals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewLocals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.ViewLocals.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ViewLocals.Location = new System.Drawing.Point(3, 67);
+            this.ViewLocals.Location = new System.Drawing.Point(3, 318);
             this.ViewLocals.Name = "ViewLocals";
-            this.ViewLocals.Size = new System.Drawing.Size(194, 10);
+            this.ViewLocals.Size = new System.Drawing.Size(794, 84);
             this.ViewLocals.TabIndex = 2;
             this.ViewLocals.Text = "View current premises";
             this.ViewLocals.UseVisualStyleBackColor = false;
-            // 
-            // PhotoPanel
-            // 
-            this.PhotoPanel.BackColor = System.Drawing.Color.DimGray;
-            this.PhotoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhotoPanel.Location = new System.Drawing.Point(3, 3);
-            this.PhotoPanel.Name = "PhotoPanel";
-            this.PhotoPanel.Size = new System.Drawing.Size(194, 26);
-            this.PhotoPanel.TabIndex = 3;
+            this.ViewLocals.Click += new System.EventHandler(this.ViewLocals_Click);
             // 
             // AddPanel
             // 
             this.AddPanel.BackColor = System.Drawing.Color.DimGray;
             this.AddPanel.Controls.Add(this.AddHolder);
             this.AddPanel.Controls.Add(this.TopBottonHolder);
-            this.AddPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddPanel.Location = new System.Drawing.Point(0, 0);
+            this.AddPanel.Location = new System.Drawing.Point(276, 15);
             this.AddPanel.Name = "AddPanel";
-            this.AddPanel.Size = new System.Drawing.Size(800, 450);
+            this.AddPanel.Size = new System.Drawing.Size(171, 97);
             this.AddPanel.TabIndex = 1;
             this.AddPanel.Visible = false;
             // 
             // AddHolder
             // 
+            this.AddHolder.Controls.Add(this.StorePanel);
             this.AddHolder.Controls.Add(this.RecreationalPanel);
             this.AddHolder.Controls.Add(this.RestaurantPanel);
             this.AddHolder.Controls.Add(this.CinemaPanel);
-            this.AddHolder.Controls.Add(this.StorePanel);
             this.AddHolder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddHolder.Location = new System.Drawing.Point(0, 100);
             this.AddHolder.Name = "AddHolder";
-            this.AddHolder.Size = new System.Drawing.Size(800, 350);
+            this.AddHolder.Size = new System.Drawing.Size(171, 0);
             this.AddHolder.TabIndex = 3;
-            // 
-            // RecreationalPanel
-            // 
-            this.RecreationalPanel.ColumnCount = 4;
-            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.RecreationalPanel.Controls.Add(this.RecreationalNameLabel, 1, 1);
-            this.RecreationalPanel.Controls.Add(this.RecreationalIDLabel, 1, 2);
-            this.RecreationalPanel.Controls.Add(this.RecreationalScheduleLabel, 1, 3);
-            this.RecreationalPanel.Controls.Add(this.RecreationalNameTextBox, 2, 1);
-            this.RecreationalPanel.Controls.Add(this.RecreationalIDTextBox, 2, 2);
-            this.RecreationalPanel.Controls.Add(this.RecreationalScheduleTextBox, 2, 3);
-            this.RecreationalPanel.Controls.Add(this.FinalAddRecreational, 2, 5);
-            this.RecreationalPanel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.RecreationalPanel.Location = new System.Drawing.Point(235, 126);
-            this.RecreationalPanel.Name = "RecreationalPanel";
-            this.RecreationalPanel.RowCount = 6;
-            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
-            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
-            this.RecreationalPanel.Size = new System.Drawing.Size(200, 100);
-            this.RecreationalPanel.TabIndex = 5;
-            this.RecreationalPanel.Visible = false;
-            // 
-            // RecreationalNameLabel
-            // 
-            this.RecreationalNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RecreationalNameLabel.AutoSize = true;
-            this.RecreationalNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.RecreationalNameLabel.Location = new System.Drawing.Point(24, 21);
-            this.RecreationalNameLabel.Name = "RecreationalNameLabel";
-            this.RecreationalNameLabel.Size = new System.Drawing.Size(53, 14);
-            this.RecreationalNameLabel.TabIndex = 0;
-            this.RecreationalNameLabel.Text = "Owner\'s name";
-            this.RecreationalNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RecreationalIDLabel
-            // 
-            this.RecreationalIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RecreationalIDLabel.AutoSize = true;
-            this.RecreationalIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.RecreationalIDLabel.Location = new System.Drawing.Point(24, 35);
-            this.RecreationalIDLabel.Name = "RecreationalIDLabel";
-            this.RecreationalIDLabel.Size = new System.Drawing.Size(53, 14);
-            this.RecreationalIDLabel.TabIndex = 1;
-            this.RecreationalIDLabel.Text = "Cinema\'s ID";
-            this.RecreationalIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RecreationalScheduleLabel
-            // 
-            this.RecreationalScheduleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RecreationalScheduleLabel.AutoSize = true;
-            this.RecreationalScheduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.RecreationalScheduleLabel.Location = new System.Drawing.Point(24, 49);
-            this.RecreationalScheduleLabel.Name = "RecreationalScheduleLabel";
-            this.RecreationalScheduleLabel.Size = new System.Drawing.Size(53, 14);
-            this.RecreationalScheduleLabel.TabIndex = 2;
-            this.RecreationalScheduleLabel.Text = "Cinema\'s Schedule";
-            this.RecreationalScheduleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RecreationalNameTextBox
-            // 
-            this.RecreationalNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RecreationalNameTextBox.Location = new System.Drawing.Point(83, 24);
-            this.RecreationalNameTextBox.Name = "RecreationalNameTextBox";
-            this.RecreationalNameTextBox.Size = new System.Drawing.Size(94, 20);
-            this.RecreationalNameTextBox.TabIndex = 4;
-            // 
-            // RecreationalIDTextBox
-            // 
-            this.RecreationalIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RecreationalIDTextBox.Location = new System.Drawing.Point(83, 38);
-            this.RecreationalIDTextBox.Name = "RecreationalIDTextBox";
-            this.RecreationalIDTextBox.Size = new System.Drawing.Size(94, 20);
-            this.RecreationalIDTextBox.TabIndex = 5;
-            // 
-            // RecreationalScheduleTextBox
-            // 
-            this.RecreationalScheduleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RecreationalScheduleTextBox.Location = new System.Drawing.Point(83, 52);
-            this.RecreationalScheduleTextBox.Name = "RecreationalScheduleTextBox";
-            this.RecreationalScheduleTextBox.Size = new System.Drawing.Size(94, 20);
-            this.RecreationalScheduleTextBox.TabIndex = 6;
-            // 
-            // FinalAddRecreational
-            // 
-            this.FinalAddRecreational.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.FinalAddRecreational.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FinalAddRecreational.FlatAppearance.BorderSize = 0;
-            this.FinalAddRecreational.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinalAddRecreational.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinalAddRecreational.Location = new System.Drawing.Point(83, 80);
-            this.FinalAddRecreational.Name = "FinalAddRecreational";
-            this.FinalAddRecreational.Size = new System.Drawing.Size(94, 17);
-            this.FinalAddRecreational.TabIndex = 8;
-            this.FinalAddRecreational.Text = "Add To DataBase";
-            this.FinalAddRecreational.UseVisualStyleBackColor = false;
-            this.FinalAddRecreational.Click += new System.EventHandler(this.FinalAddRecreational_Click);
-            // 
-            // RestaurantPanel
-            // 
-            this.RestaurantPanel.ColumnCount = 4;
-            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.RestaurantPanel.Controls.Add(this.RestaurantNameLabel, 1, 1);
-            this.RestaurantPanel.Controls.Add(this.RestaurantIdLabel, 1, 2);
-            this.RestaurantPanel.Controls.Add(this.RestaurantScheduleLabel, 1, 3);
-            this.RestaurantPanel.Controls.Add(this.RestaurantPrivateLabel, 1, 4);
-            this.RestaurantPanel.Controls.Add(this.RestaurantNameTextBox, 2, 1);
-            this.RestaurantPanel.Controls.Add(this.RestaurantIDTextBox, 2, 2);
-            this.RestaurantPanel.Controls.Add(this.RestaurantScheduleTextBox, 2, 3);
-            this.RestaurantPanel.Controls.Add(this.RestaurantPrivateTextBox, 2, 4);
-            this.RestaurantPanel.Controls.Add(this.FinalAddRestaurant, 2, 5);
-            this.RestaurantPanel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.RestaurantPanel.Location = new System.Drawing.Point(235, 6);
-            this.RestaurantPanel.Name = "RestaurantPanel";
-            this.RestaurantPanel.RowCount = 6;
-            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
-            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
-            this.RestaurantPanel.Size = new System.Drawing.Size(200, 100);
-            this.RestaurantPanel.TabIndex = 4;
-            this.RestaurantPanel.Visible = false;
-            // 
-            // RestaurantNameLabel
-            // 
-            this.RestaurantNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RestaurantNameLabel.AutoSize = true;
-            this.RestaurantNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.RestaurantNameLabel.Location = new System.Drawing.Point(24, 21);
-            this.RestaurantNameLabel.Name = "RestaurantNameLabel";
-            this.RestaurantNameLabel.Size = new System.Drawing.Size(53, 14);
-            this.RestaurantNameLabel.TabIndex = 0;
-            this.RestaurantNameLabel.Text = "Owner\'s name";
-            this.RestaurantNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RestaurantIdLabel
-            // 
-            this.RestaurantIdLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RestaurantIdLabel.AutoSize = true;
-            this.RestaurantIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.RestaurantIdLabel.Location = new System.Drawing.Point(26, 35);
-            this.RestaurantIdLabel.Name = "RestaurantIdLabel";
-            this.RestaurantIdLabel.Size = new System.Drawing.Size(51, 14);
-            this.RestaurantIdLabel.TabIndex = 1;
-            this.RestaurantIdLabel.Text = "Restaurant\'s ID";
-            this.RestaurantIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RestaurantScheduleLabel
-            // 
-            this.RestaurantScheduleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RestaurantScheduleLabel.AutoSize = true;
-            this.RestaurantScheduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.RestaurantScheduleLabel.Location = new System.Drawing.Point(26, 49);
-            this.RestaurantScheduleLabel.Name = "RestaurantScheduleLabel";
-            this.RestaurantScheduleLabel.Size = new System.Drawing.Size(51, 14);
-            this.RestaurantScheduleLabel.TabIndex = 2;
-            this.RestaurantScheduleLabel.Text = "Restaurant\'s Schedule";
-            this.RestaurantScheduleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RestaurantPrivateLabel
-            // 
-            this.RestaurantPrivateLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.RestaurantPrivateLabel.AutoSize = true;
-            this.RestaurantPrivateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.RestaurantPrivateLabel.Location = new System.Drawing.Point(25, 63);
-            this.RestaurantPrivateLabel.Name = "RestaurantPrivateLabel";
-            this.RestaurantPrivateLabel.Size = new System.Drawing.Size(52, 14);
-            this.RestaurantPrivateLabel.TabIndex = 3;
-            this.RestaurantPrivateLabel.Text = "Restaurant has exclusive tables (True/False) ";
-            this.RestaurantPrivateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RestaurantNameTextBox
-            // 
-            this.RestaurantNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RestaurantNameTextBox.Location = new System.Drawing.Point(83, 24);
-            this.RestaurantNameTextBox.Name = "RestaurantNameTextBox";
-            this.RestaurantNameTextBox.Size = new System.Drawing.Size(94, 20);
-            this.RestaurantNameTextBox.TabIndex = 4;
-            // 
-            // RestaurantIDTextBox
-            // 
-            this.RestaurantIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RestaurantIDTextBox.Location = new System.Drawing.Point(83, 38);
-            this.RestaurantIDTextBox.Name = "RestaurantIDTextBox";
-            this.RestaurantIDTextBox.Size = new System.Drawing.Size(94, 20);
-            this.RestaurantIDTextBox.TabIndex = 5;
-            // 
-            // RestaurantScheduleTextBox
-            // 
-            this.RestaurantScheduleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RestaurantScheduleTextBox.Location = new System.Drawing.Point(83, 52);
-            this.RestaurantScheduleTextBox.Name = "RestaurantScheduleTextBox";
-            this.RestaurantScheduleTextBox.Size = new System.Drawing.Size(94, 20);
-            this.RestaurantScheduleTextBox.TabIndex = 6;
-            // 
-            // RestaurantPrivateTextBox
-            // 
-            this.RestaurantPrivateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RestaurantPrivateTextBox.Location = new System.Drawing.Point(83, 66);
-            this.RestaurantPrivateTextBox.Name = "RestaurantPrivateTextBox";
-            this.RestaurantPrivateTextBox.Size = new System.Drawing.Size(94, 20);
-            this.RestaurantPrivateTextBox.TabIndex = 7;
-            // 
-            // FinalAddRestaurant
-            // 
-            this.FinalAddRestaurant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.FinalAddRestaurant.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FinalAddRestaurant.FlatAppearance.BorderSize = 0;
-            this.FinalAddRestaurant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinalAddRestaurant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinalAddRestaurant.Location = new System.Drawing.Point(83, 80);
-            this.FinalAddRestaurant.Name = "FinalAddRestaurant";
-            this.FinalAddRestaurant.Size = new System.Drawing.Size(94, 17);
-            this.FinalAddRestaurant.TabIndex = 8;
-            this.FinalAddRestaurant.Text = "Add To DataBase";
-            this.FinalAddRestaurant.UseVisualStyleBackColor = false;
-            this.FinalAddRestaurant.Click += new System.EventHandler(this.FinalAddRestaurant_Click);
-            // 
-            // CinemaPanel
-            // 
-            this.CinemaPanel.ColumnCount = 4;
-            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.CinemaPanel.Controls.Add(this.CinemaOwnerLabel, 1, 1);
-            this.CinemaPanel.Controls.Add(this.CinemaIDLabel, 1, 2);
-            this.CinemaPanel.Controls.Add(this.CinemaScheduleLabel, 1, 3);
-            this.CinemaPanel.Controls.Add(this.CinemaRoomsLabel, 1, 4);
-            this.CinemaPanel.Controls.Add(this.CinemaNameTextBox, 2, 1);
-            this.CinemaPanel.Controls.Add(this.CinemaIDTextBox, 2, 2);
-            this.CinemaPanel.Controls.Add(this.CinemaScheduleTextBox, 2, 3);
-            this.CinemaPanel.Controls.Add(this.CinemaNofRoomsLabel, 2, 4);
-            this.CinemaPanel.Controls.Add(this.FinalAddCinema, 2, 5);
-            this.CinemaPanel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.CinemaPanel.Location = new System.Drawing.Point(12, 126);
-            this.CinemaPanel.Name = "CinemaPanel";
-            this.CinemaPanel.RowCount = 6;
-            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
-            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
-            this.CinemaPanel.Size = new System.Drawing.Size(200, 100);
-            this.CinemaPanel.TabIndex = 3;
-            this.CinemaPanel.Visible = false;
-            // 
-            // CinemaOwnerLabel
-            // 
-            this.CinemaOwnerLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CinemaOwnerLabel.AutoSize = true;
-            this.CinemaOwnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CinemaOwnerLabel.Location = new System.Drawing.Point(24, 21);
-            this.CinemaOwnerLabel.Name = "CinemaOwnerLabel";
-            this.CinemaOwnerLabel.Size = new System.Drawing.Size(53, 14);
-            this.CinemaOwnerLabel.TabIndex = 0;
-            this.CinemaOwnerLabel.Text = "Owner\'s name";
-            this.CinemaOwnerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CinemaIDLabel
-            // 
-            this.CinemaIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CinemaIDLabel.AutoSize = true;
-            this.CinemaIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CinemaIDLabel.Location = new System.Drawing.Point(24, 35);
-            this.CinemaIDLabel.Name = "CinemaIDLabel";
-            this.CinemaIDLabel.Size = new System.Drawing.Size(53, 14);
-            this.CinemaIDLabel.TabIndex = 1;
-            this.CinemaIDLabel.Text = "Cinema\'s ID";
-            this.CinemaIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CinemaScheduleLabel
-            // 
-            this.CinemaScheduleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CinemaScheduleLabel.AutoSize = true;
-            this.CinemaScheduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CinemaScheduleLabel.Location = new System.Drawing.Point(24, 49);
-            this.CinemaScheduleLabel.Name = "CinemaScheduleLabel";
-            this.CinemaScheduleLabel.Size = new System.Drawing.Size(53, 14);
-            this.CinemaScheduleLabel.TabIndex = 2;
-            this.CinemaScheduleLabel.Text = "Cinema\'s Schedule";
-            this.CinemaScheduleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CinemaRoomsLabel
-            // 
-            this.CinemaRoomsLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CinemaRoomsLabel.AutoSize = true;
-            this.CinemaRoomsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CinemaRoomsLabel.Location = new System.Drawing.Point(24, 63);
-            this.CinemaRoomsLabel.Name = "CinemaRoomsLabel";
-            this.CinemaRoomsLabel.Size = new System.Drawing.Size(53, 14);
-            this.CinemaRoomsLabel.TabIndex = 3;
-            this.CinemaRoomsLabel.Text = "Cinema\'s N of rooms";
-            this.CinemaRoomsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // CinemaNameTextBox
-            // 
-            this.CinemaNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CinemaNameTextBox.Location = new System.Drawing.Point(83, 24);
-            this.CinemaNameTextBox.Name = "CinemaNameTextBox";
-            this.CinemaNameTextBox.Size = new System.Drawing.Size(94, 20);
-            this.CinemaNameTextBox.TabIndex = 4;
-            // 
-            // CinemaIDTextBox
-            // 
-            this.CinemaIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CinemaIDTextBox.Location = new System.Drawing.Point(83, 38);
-            this.CinemaIDTextBox.Name = "CinemaIDTextBox";
-            this.CinemaIDTextBox.Size = new System.Drawing.Size(94, 20);
-            this.CinemaIDTextBox.TabIndex = 5;
-            // 
-            // CinemaScheduleTextBox
-            // 
-            this.CinemaScheduleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CinemaScheduleTextBox.Location = new System.Drawing.Point(83, 52);
-            this.CinemaScheduleTextBox.Name = "CinemaScheduleTextBox";
-            this.CinemaScheduleTextBox.Size = new System.Drawing.Size(94, 20);
-            this.CinemaScheduleTextBox.TabIndex = 6;
-            // 
-            // CinemaNofRoomsLabel
-            // 
-            this.CinemaNofRoomsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CinemaNofRoomsLabel.Location = new System.Drawing.Point(83, 66);
-            this.CinemaNofRoomsLabel.Name = "CinemaNofRoomsLabel";
-            this.CinemaNofRoomsLabel.Size = new System.Drawing.Size(94, 20);
-            this.CinemaNofRoomsLabel.TabIndex = 7;
-            // 
-            // FinalAddCinema
-            // 
-            this.FinalAddCinema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.FinalAddCinema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FinalAddCinema.FlatAppearance.BorderSize = 0;
-            this.FinalAddCinema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinalAddCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinalAddCinema.Location = new System.Drawing.Point(83, 80);
-            this.FinalAddCinema.Name = "FinalAddCinema";
-            this.FinalAddCinema.Size = new System.Drawing.Size(94, 17);
-            this.FinalAddCinema.TabIndex = 8;
-            this.FinalAddCinema.Text = "Add To DataBase";
-            this.FinalAddCinema.UseVisualStyleBackColor = false;
-            this.FinalAddCinema.Click += new System.EventHandler(this.FinalAddCinema_Click);
             // 
             // StorePanel
             // 
+            this.StorePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.StorePanel.ColumnCount = 4;
             this.StorePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.StorePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -557,6 +193,7 @@
             this.StorePanel.Controls.Add(this.StoreSheduleLabel, 2, 3);
             this.StorePanel.Controls.Add(this.StoreCategoryLabel, 2, 4);
             this.StorePanel.Controls.Add(this.FinalAddStore, 2, 5);
+            this.StorePanel.Controls.Add(this.UsedIdStore, 3, 2);
             this.StorePanel.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.StorePanel.Location = new System.Drawing.Point(12, 6);
             this.StorePanel.Name = "StorePanel";
@@ -666,6 +303,414 @@
             this.FinalAddStore.UseVisualStyleBackColor = false;
             this.FinalAddStore.Click += new System.EventHandler(this.FinalAddStore_Click);
             // 
+            // UsedIdStore
+            // 
+            this.UsedIdStore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.UsedIdStore.AutoSize = true;
+            this.UsedIdStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsedIdStore.ForeColor = System.Drawing.Color.Maroon;
+            this.UsedIdStore.Location = new System.Drawing.Point(183, 35);
+            this.UsedIdStore.Name = "UsedIdStore";
+            this.UsedIdStore.Size = new System.Drawing.Size(14, 14);
+            this.UsedIdStore.TabIndex = 10;
+            this.UsedIdStore.Text = "Id alredy in DataBase";
+            this.UsedIdStore.Visible = false;
+            // 
+            // RecreationalPanel
+            // 
+            this.RecreationalPanel.ColumnCount = 4;
+            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.RecreationalPanel.Controls.Add(this.RecreationalNameLabel, 1, 1);
+            this.RecreationalPanel.Controls.Add(this.RecreationalIDLabel, 1, 2);
+            this.RecreationalPanel.Controls.Add(this.RecreationalScheduleLabel, 1, 3);
+            this.RecreationalPanel.Controls.Add(this.RecreationalNameTextBox, 2, 1);
+            this.RecreationalPanel.Controls.Add(this.RecreationalIDTextBox, 2, 2);
+            this.RecreationalPanel.Controls.Add(this.RecreationalScheduleTextBox, 2, 3);
+            this.RecreationalPanel.Controls.Add(this.FinalAddRecreational, 2, 5);
+            this.RecreationalPanel.Controls.Add(this.UsedIdRecreationalLabel, 3, 2);
+            this.RecreationalPanel.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.RecreationalPanel.Location = new System.Drawing.Point(235, 126);
+            this.RecreationalPanel.Name = "RecreationalPanel";
+            this.RecreationalPanel.RowCount = 6;
+            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
+            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RecreationalPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
+            this.RecreationalPanel.Size = new System.Drawing.Size(200, 100);
+            this.RecreationalPanel.TabIndex = 5;
+            this.RecreationalPanel.Visible = false;
+            // 
+            // RecreationalNameLabel
+            // 
+            this.RecreationalNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RecreationalNameLabel.AutoSize = true;
+            this.RecreationalNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RecreationalNameLabel.Location = new System.Drawing.Point(24, 21);
+            this.RecreationalNameLabel.Name = "RecreationalNameLabel";
+            this.RecreationalNameLabel.Size = new System.Drawing.Size(53, 14);
+            this.RecreationalNameLabel.TabIndex = 0;
+            this.RecreationalNameLabel.Text = "Owner\'s name";
+            this.RecreationalNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RecreationalIDLabel
+            // 
+            this.RecreationalIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RecreationalIDLabel.AutoSize = true;
+            this.RecreationalIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RecreationalIDLabel.Location = new System.Drawing.Point(23, 35);
+            this.RecreationalIDLabel.Name = "RecreationalIDLabel";
+            this.RecreationalIDLabel.Size = new System.Drawing.Size(54, 14);
+            this.RecreationalIDLabel.TabIndex = 1;
+            this.RecreationalIDLabel.Text = "Recreational\'s ID";
+            this.RecreationalIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RecreationalScheduleLabel
+            // 
+            this.RecreationalScheduleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RecreationalScheduleLabel.AutoSize = true;
+            this.RecreationalScheduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RecreationalScheduleLabel.Location = new System.Drawing.Point(23, 49);
+            this.RecreationalScheduleLabel.Name = "RecreationalScheduleLabel";
+            this.RecreationalScheduleLabel.Size = new System.Drawing.Size(54, 14);
+            this.RecreationalScheduleLabel.TabIndex = 2;
+            this.RecreationalScheduleLabel.Text = "Recreational\'s Schedule";
+            this.RecreationalScheduleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RecreationalNameTextBox
+            // 
+            this.RecreationalNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RecreationalNameTextBox.Location = new System.Drawing.Point(83, 24);
+            this.RecreationalNameTextBox.Name = "RecreationalNameTextBox";
+            this.RecreationalNameTextBox.Size = new System.Drawing.Size(94, 20);
+            this.RecreationalNameTextBox.TabIndex = 4;
+            // 
+            // RecreationalIDTextBox
+            // 
+            this.RecreationalIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RecreationalIDTextBox.Location = new System.Drawing.Point(83, 38);
+            this.RecreationalIDTextBox.Name = "RecreationalIDTextBox";
+            this.RecreationalIDTextBox.Size = new System.Drawing.Size(94, 20);
+            this.RecreationalIDTextBox.TabIndex = 5;
+            // 
+            // RecreationalScheduleTextBox
+            // 
+            this.RecreationalScheduleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RecreationalScheduleTextBox.Location = new System.Drawing.Point(83, 52);
+            this.RecreationalScheduleTextBox.Name = "RecreationalScheduleTextBox";
+            this.RecreationalScheduleTextBox.Size = new System.Drawing.Size(94, 20);
+            this.RecreationalScheduleTextBox.TabIndex = 6;
+            // 
+            // FinalAddRecreational
+            // 
+            this.FinalAddRecreational.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FinalAddRecreational.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FinalAddRecreational.FlatAppearance.BorderSize = 0;
+            this.FinalAddRecreational.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinalAddRecreational.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinalAddRecreational.Location = new System.Drawing.Point(83, 80);
+            this.FinalAddRecreational.Name = "FinalAddRecreational";
+            this.FinalAddRecreational.Size = new System.Drawing.Size(94, 17);
+            this.FinalAddRecreational.TabIndex = 8;
+            this.FinalAddRecreational.Text = "Add To DataBase";
+            this.FinalAddRecreational.UseVisualStyleBackColor = false;
+            this.FinalAddRecreational.Click += new System.EventHandler(this.FinalAddRecreational_Click);
+            // 
+            // UsedIdRecreationalLabel
+            // 
+            this.UsedIdRecreationalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.UsedIdRecreationalLabel.AutoSize = true;
+            this.UsedIdRecreationalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsedIdRecreationalLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.UsedIdRecreationalLabel.Location = new System.Drawing.Point(183, 35);
+            this.UsedIdRecreationalLabel.Name = "UsedIdRecreationalLabel";
+            this.UsedIdRecreationalLabel.Size = new System.Drawing.Size(14, 14);
+            this.UsedIdRecreationalLabel.TabIndex = 11;
+            this.UsedIdRecreationalLabel.Text = "Id alredy in DataBase";
+            this.UsedIdRecreationalLabel.Visible = false;
+            // 
+            // RestaurantPanel
+            // 
+            this.RestaurantPanel.ColumnCount = 4;
+            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.RestaurantPanel.Controls.Add(this.RestaurantNameLabel, 1, 1);
+            this.RestaurantPanel.Controls.Add(this.RestaurantIdLabel, 1, 2);
+            this.RestaurantPanel.Controls.Add(this.RestaurantScheduleLabel, 1, 3);
+            this.RestaurantPanel.Controls.Add(this.RestaurantPrivateLabel, 1, 4);
+            this.RestaurantPanel.Controls.Add(this.RestaurantNameTextBox, 2, 1);
+            this.RestaurantPanel.Controls.Add(this.RestaurantIDTextBox, 2, 2);
+            this.RestaurantPanel.Controls.Add(this.RestaurantScheduleTextBox, 2, 3);
+            this.RestaurantPanel.Controls.Add(this.RestaurantPrivateTextBox, 2, 4);
+            this.RestaurantPanel.Controls.Add(this.FinalAddRestaurant, 2, 5);
+            this.RestaurantPanel.Controls.Add(this.UsedIdRestaurantLabel, 3, 2);
+            this.RestaurantPanel.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.RestaurantPanel.Location = new System.Drawing.Point(235, 6);
+            this.RestaurantPanel.Name = "RestaurantPanel";
+            this.RestaurantPanel.RowCount = 6;
+            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
+            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.RestaurantPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
+            this.RestaurantPanel.Size = new System.Drawing.Size(200, 100);
+            this.RestaurantPanel.TabIndex = 4;
+            this.RestaurantPanel.Visible = false;
+            // 
+            // RestaurantNameLabel
+            // 
+            this.RestaurantNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RestaurantNameLabel.AutoSize = true;
+            this.RestaurantNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RestaurantNameLabel.Location = new System.Drawing.Point(24, 21);
+            this.RestaurantNameLabel.Name = "RestaurantNameLabel";
+            this.RestaurantNameLabel.Size = new System.Drawing.Size(53, 14);
+            this.RestaurantNameLabel.TabIndex = 0;
+            this.RestaurantNameLabel.Text = "Owner\'s name";
+            this.RestaurantNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RestaurantIdLabel
+            // 
+            this.RestaurantIdLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RestaurantIdLabel.AutoSize = true;
+            this.RestaurantIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RestaurantIdLabel.Location = new System.Drawing.Point(26, 35);
+            this.RestaurantIdLabel.Name = "RestaurantIdLabel";
+            this.RestaurantIdLabel.Size = new System.Drawing.Size(51, 14);
+            this.RestaurantIdLabel.TabIndex = 1;
+            this.RestaurantIdLabel.Text = "Restaurant\'s ID";
+            this.RestaurantIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RestaurantScheduleLabel
+            // 
+            this.RestaurantScheduleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RestaurantScheduleLabel.AutoSize = true;
+            this.RestaurantScheduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RestaurantScheduleLabel.Location = new System.Drawing.Point(26, 49);
+            this.RestaurantScheduleLabel.Name = "RestaurantScheduleLabel";
+            this.RestaurantScheduleLabel.Size = new System.Drawing.Size(51, 14);
+            this.RestaurantScheduleLabel.TabIndex = 2;
+            this.RestaurantScheduleLabel.Text = "Restaurant\'s Schedule";
+            this.RestaurantScheduleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RestaurantPrivateLabel
+            // 
+            this.RestaurantPrivateLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.RestaurantPrivateLabel.AutoSize = true;
+            this.RestaurantPrivateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RestaurantPrivateLabel.Location = new System.Drawing.Point(25, 63);
+            this.RestaurantPrivateLabel.Name = "RestaurantPrivateLabel";
+            this.RestaurantPrivateLabel.Size = new System.Drawing.Size(52, 14);
+            this.RestaurantPrivateLabel.TabIndex = 3;
+            this.RestaurantPrivateLabel.Text = "Restaurant has exclusive tables (True/False) ";
+            this.RestaurantPrivateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RestaurantNameTextBox
+            // 
+            this.RestaurantNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RestaurantNameTextBox.Location = new System.Drawing.Point(83, 24);
+            this.RestaurantNameTextBox.Name = "RestaurantNameTextBox";
+            this.RestaurantNameTextBox.Size = new System.Drawing.Size(94, 20);
+            this.RestaurantNameTextBox.TabIndex = 4;
+            // 
+            // RestaurantIDTextBox
+            // 
+            this.RestaurantIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RestaurantIDTextBox.Location = new System.Drawing.Point(83, 38);
+            this.RestaurantIDTextBox.Name = "RestaurantIDTextBox";
+            this.RestaurantIDTextBox.Size = new System.Drawing.Size(94, 20);
+            this.RestaurantIDTextBox.TabIndex = 5;
+            // 
+            // RestaurantScheduleTextBox
+            // 
+            this.RestaurantScheduleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RestaurantScheduleTextBox.Location = new System.Drawing.Point(83, 52);
+            this.RestaurantScheduleTextBox.Name = "RestaurantScheduleTextBox";
+            this.RestaurantScheduleTextBox.Size = new System.Drawing.Size(94, 20);
+            this.RestaurantScheduleTextBox.TabIndex = 6;
+            // 
+            // RestaurantPrivateTextBox
+            // 
+            this.RestaurantPrivateTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RestaurantPrivateTextBox.Location = new System.Drawing.Point(83, 66);
+            this.RestaurantPrivateTextBox.Name = "RestaurantPrivateTextBox";
+            this.RestaurantPrivateTextBox.Size = new System.Drawing.Size(94, 20);
+            this.RestaurantPrivateTextBox.TabIndex = 7;
+            // 
+            // FinalAddRestaurant
+            // 
+            this.FinalAddRestaurant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FinalAddRestaurant.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FinalAddRestaurant.FlatAppearance.BorderSize = 0;
+            this.FinalAddRestaurant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinalAddRestaurant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinalAddRestaurant.Location = new System.Drawing.Point(83, 80);
+            this.FinalAddRestaurant.Name = "FinalAddRestaurant";
+            this.FinalAddRestaurant.Size = new System.Drawing.Size(94, 17);
+            this.FinalAddRestaurant.TabIndex = 8;
+            this.FinalAddRestaurant.Text = "Add To DataBase";
+            this.FinalAddRestaurant.UseVisualStyleBackColor = false;
+            this.FinalAddRestaurant.Click += new System.EventHandler(this.FinalAddRestaurant_Click);
+            // 
+            // UsedIdRestaurantLabel
+            // 
+            this.UsedIdRestaurantLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.UsedIdRestaurantLabel.AutoSize = true;
+            this.UsedIdRestaurantLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsedIdRestaurantLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.UsedIdRestaurantLabel.Location = new System.Drawing.Point(183, 35);
+            this.UsedIdRestaurantLabel.Name = "UsedIdRestaurantLabel";
+            this.UsedIdRestaurantLabel.Size = new System.Drawing.Size(14, 14);
+            this.UsedIdRestaurantLabel.TabIndex = 11;
+            this.UsedIdRestaurantLabel.Text = "Id alredy in DataBase";
+            this.UsedIdRestaurantLabel.Visible = false;
+            // 
+            // CinemaPanel
+            // 
+            this.CinemaPanel.ColumnCount = 4;
+            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.CinemaPanel.Controls.Add(this.CinemaOwnerLabel, 1, 1);
+            this.CinemaPanel.Controls.Add(this.CinemaIDLabel, 1, 2);
+            this.CinemaPanel.Controls.Add(this.CinemaScheduleLabel, 1, 3);
+            this.CinemaPanel.Controls.Add(this.CinemaRoomsLabel, 1, 4);
+            this.CinemaPanel.Controls.Add(this.CinemaNameTextBox, 2, 1);
+            this.CinemaPanel.Controls.Add(this.CinemaIDTextBox, 2, 2);
+            this.CinemaPanel.Controls.Add(this.CinemaScheduleTextBox, 2, 3);
+            this.CinemaPanel.Controls.Add(this.CinemaNofRoomsLabel, 2, 4);
+            this.CinemaPanel.Controls.Add(this.FinalAddCinema, 2, 5);
+            this.CinemaPanel.Controls.Add(this.UsedIdCinemaLabel, 3, 2);
+            this.CinemaPanel.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.CinemaPanel.Location = new System.Drawing.Point(12, 126);
+            this.CinemaPanel.Name = "CinemaPanel";
+            this.CinemaPanel.RowCount = 6;
+            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
+            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
+            this.CinemaPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
+            this.CinemaPanel.Size = new System.Drawing.Size(200, 100);
+            this.CinemaPanel.TabIndex = 3;
+            this.CinemaPanel.Visible = false;
+            // 
+            // CinemaOwnerLabel
+            // 
+            this.CinemaOwnerLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CinemaOwnerLabel.AutoSize = true;
+            this.CinemaOwnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CinemaOwnerLabel.Location = new System.Drawing.Point(24, 21);
+            this.CinemaOwnerLabel.Name = "CinemaOwnerLabel";
+            this.CinemaOwnerLabel.Size = new System.Drawing.Size(53, 14);
+            this.CinemaOwnerLabel.TabIndex = 0;
+            this.CinemaOwnerLabel.Text = "Owner\'s name";
+            this.CinemaOwnerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CinemaIDLabel
+            // 
+            this.CinemaIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CinemaIDLabel.AutoSize = true;
+            this.CinemaIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CinemaIDLabel.Location = new System.Drawing.Point(24, 35);
+            this.CinemaIDLabel.Name = "CinemaIDLabel";
+            this.CinemaIDLabel.Size = new System.Drawing.Size(53, 14);
+            this.CinemaIDLabel.TabIndex = 1;
+            this.CinemaIDLabel.Text = "Cinema\'s ID";
+            this.CinemaIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CinemaScheduleLabel
+            // 
+            this.CinemaScheduleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CinemaScheduleLabel.AutoSize = true;
+            this.CinemaScheduleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CinemaScheduleLabel.Location = new System.Drawing.Point(24, 49);
+            this.CinemaScheduleLabel.Name = "CinemaScheduleLabel";
+            this.CinemaScheduleLabel.Size = new System.Drawing.Size(53, 14);
+            this.CinemaScheduleLabel.TabIndex = 2;
+            this.CinemaScheduleLabel.Text = "Cinema\'s Schedule";
+            this.CinemaScheduleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CinemaRoomsLabel
+            // 
+            this.CinemaRoomsLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CinemaRoomsLabel.AutoSize = true;
+            this.CinemaRoomsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CinemaRoomsLabel.Location = new System.Drawing.Point(24, 63);
+            this.CinemaRoomsLabel.Name = "CinemaRoomsLabel";
+            this.CinemaRoomsLabel.Size = new System.Drawing.Size(53, 14);
+            this.CinemaRoomsLabel.TabIndex = 3;
+            this.CinemaRoomsLabel.Text = "Cinema\'s N of rooms";
+            this.CinemaRoomsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CinemaNameTextBox
+            // 
+            this.CinemaNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CinemaNameTextBox.Location = new System.Drawing.Point(83, 24);
+            this.CinemaNameTextBox.Name = "CinemaNameTextBox";
+            this.CinemaNameTextBox.Size = new System.Drawing.Size(94, 20);
+            this.CinemaNameTextBox.TabIndex = 4;
+            // 
+            // CinemaIDTextBox
+            // 
+            this.CinemaIDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CinemaIDTextBox.Location = new System.Drawing.Point(83, 38);
+            this.CinemaIDTextBox.Name = "CinemaIDTextBox";
+            this.CinemaIDTextBox.Size = new System.Drawing.Size(94, 20);
+            this.CinemaIDTextBox.TabIndex = 5;
+            // 
+            // CinemaScheduleTextBox
+            // 
+            this.CinemaScheduleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CinemaScheduleTextBox.Location = new System.Drawing.Point(83, 52);
+            this.CinemaScheduleTextBox.Name = "CinemaScheduleTextBox";
+            this.CinemaScheduleTextBox.Size = new System.Drawing.Size(94, 20);
+            this.CinemaScheduleTextBox.TabIndex = 6;
+            // 
+            // CinemaNofRoomsLabel
+            // 
+            this.CinemaNofRoomsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CinemaNofRoomsLabel.Location = new System.Drawing.Point(83, 66);
+            this.CinemaNofRoomsLabel.Name = "CinemaNofRoomsLabel";
+            this.CinemaNofRoomsLabel.Size = new System.Drawing.Size(94, 20);
+            this.CinemaNofRoomsLabel.TabIndex = 7;
+            // 
+            // FinalAddCinema
+            // 
+            this.FinalAddCinema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FinalAddCinema.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FinalAddCinema.FlatAppearance.BorderSize = 0;
+            this.FinalAddCinema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinalAddCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinalAddCinema.Location = new System.Drawing.Point(83, 80);
+            this.FinalAddCinema.Name = "FinalAddCinema";
+            this.FinalAddCinema.Size = new System.Drawing.Size(94, 17);
+            this.FinalAddCinema.TabIndex = 8;
+            this.FinalAddCinema.Text = "Add To DataBase";
+            this.FinalAddCinema.UseVisualStyleBackColor = false;
+            this.FinalAddCinema.Click += new System.EventHandler(this.FinalAddCinema_Click);
+            // 
+            // UsedIdCinemaLabel
+            // 
+            this.UsedIdCinemaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.UsedIdCinemaLabel.AutoSize = true;
+            this.UsedIdCinemaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsedIdCinemaLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.UsedIdCinemaLabel.Location = new System.Drawing.Point(183, 35);
+            this.UsedIdCinemaLabel.Name = "UsedIdCinemaLabel";
+            this.UsedIdCinemaLabel.Size = new System.Drawing.Size(14, 14);
+            this.UsedIdCinemaLabel.TabIndex = 11;
+            this.UsedIdCinemaLabel.Text = "Id alredy in DataBase";
+            this.UsedIdCinemaLabel.Visible = false;
+            // 
             // TopBottonHolder
             // 
             this.TopBottonHolder.ColumnCount = 5;
@@ -684,7 +729,7 @@
             this.TopBottonHolder.Name = "TopBottonHolder";
             this.TopBottonHolder.RowCount = 1;
             this.TopBottonHolder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TopBottonHolder.Size = new System.Drawing.Size(800, 100);
+            this.TopBottonHolder.Size = new System.Drawing.Size(171, 100);
             this.TopBottonHolder.TabIndex = 2;
             // 
             // BackButtomAdding
@@ -696,7 +741,7 @@
             this.BackButtomAdding.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButtomAdding.Location = new System.Drawing.Point(3, 47);
             this.BackButtomAdding.Name = "BackButtomAdding";
-            this.BackButtomAdding.Size = new System.Drawing.Size(154, 50);
+            this.BackButtomAdding.Size = new System.Drawing.Size(28, 50);
             this.BackButtomAdding.TabIndex = 4;
             this.BackButtomAdding.Text = "Back";
             this.BackButtomAdding.UseVisualStyleBackColor = false;
@@ -709,9 +754,9 @@
             this.AddRecreationalButton.FlatAppearance.BorderSize = 0;
             this.AddRecreationalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRecreationalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRecreationalButton.Location = new System.Drawing.Point(643, 47);
+            this.AddRecreationalButton.Location = new System.Drawing.Point(139, 47);
             this.AddRecreationalButton.Name = "AddRecreationalButton";
-            this.AddRecreationalButton.Size = new System.Drawing.Size(154, 50);
+            this.AddRecreationalButton.Size = new System.Drawing.Size(29, 50);
             this.AddRecreationalButton.TabIndex = 3;
             this.AddRecreationalButton.Text = "Add Recreational";
             this.AddRecreationalButton.UseVisualStyleBackColor = false;
@@ -724,9 +769,9 @@
             this.AddRestaurantButton.FlatAppearance.BorderSize = 0;
             this.AddRestaurantButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRestaurantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRestaurantButton.Location = new System.Drawing.Point(483, 47);
+            this.AddRestaurantButton.Location = new System.Drawing.Point(105, 47);
             this.AddRestaurantButton.Name = "AddRestaurantButton";
-            this.AddRestaurantButton.Size = new System.Drawing.Size(154, 50);
+            this.AddRestaurantButton.Size = new System.Drawing.Size(28, 50);
             this.AddRestaurantButton.TabIndex = 2;
             this.AddRestaurantButton.Text = "Add Restaurant";
             this.AddRestaurantButton.UseVisualStyleBackColor = false;
@@ -739,9 +784,9 @@
             this.AddCinemaButton.FlatAppearance.BorderSize = 0;
             this.AddCinemaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCinemaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddCinemaButton.Location = new System.Drawing.Point(323, 47);
+            this.AddCinemaButton.Location = new System.Drawing.Point(71, 47);
             this.AddCinemaButton.Name = "AddCinemaButton";
-            this.AddCinemaButton.Size = new System.Drawing.Size(154, 50);
+            this.AddCinemaButton.Size = new System.Drawing.Size(28, 50);
             this.AddCinemaButton.TabIndex = 1;
             this.AddCinemaButton.Text = "Add Cinema";
             this.AddCinemaButton.UseVisualStyleBackColor = false;
@@ -754,9 +799,9 @@
             this.AddStoreButton.FlatAppearance.BorderSize = 0;
             this.AddStoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddStoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddStoreButton.Location = new System.Drawing.Point(163, 47);
+            this.AddStoreButton.Location = new System.Drawing.Point(37, 47);
             this.AddStoreButton.Name = "AddStoreButton";
-            this.AddStoreButton.Size = new System.Drawing.Size(154, 50);
+            this.AddStoreButton.Size = new System.Drawing.Size(28, 50);
             this.AddStoreButton.TabIndex = 0;
             this.AddStoreButton.Text = "Add Store";
             this.AddStoreButton.UseVisualStyleBackColor = false;
@@ -774,14 +819,14 @@
             this.BasePanel.ResumeLayout(false);
             this.AddPanel.ResumeLayout(false);
             this.AddHolder.ResumeLayout(false);
+            this.StorePanel.ResumeLayout(false);
+            this.StorePanel.PerformLayout();
             this.RecreationalPanel.ResumeLayout(false);
             this.RecreationalPanel.PerformLayout();
             this.RestaurantPanel.ResumeLayout(false);
             this.RestaurantPanel.PerformLayout();
             this.CinemaPanel.ResumeLayout(false);
             this.CinemaPanel.PerformLayout();
-            this.StorePanel.ResumeLayout(false);
-            this.StorePanel.PerformLayout();
             this.TopBottonHolder.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -791,7 +836,6 @@
 
         private System.Windows.Forms.TableLayoutPanel BasePanel;
         private System.Windows.Forms.Button AddLocal;
-        private System.Windows.Forms.Button LocalInfo;
         private System.Windows.Forms.Button ViewLocals;
         private System.Windows.Forms.Panel PhotoPanel;
         private System.Windows.Forms.Panel AddPanel;
@@ -840,6 +884,10 @@
         private System.Windows.Forms.Button FinalAddRecreational;
         private System.Windows.Forms.Button FinalAddCinema;
         private System.Windows.Forms.Button FinalAddStore;
+        private System.Windows.Forms.Label UsedIdStore;
+        private System.Windows.Forms.Label UsedIdRecreationalLabel;
+        private System.Windows.Forms.Label UsedIdRestaurantLabel;
+        private System.Windows.Forms.Label UsedIdCinemaLabel;
     }
 }
 

@@ -14,6 +14,12 @@ namespace Lab8.Controladores
         {
             this.form1 = form1;
             this.form1.FinalAddRestaurantClick += OnFInalAddRestaurantClick;
+            this.form1.LoadRestaurant += OnLoadRestaurant;
+        }
+
+        private List<Restaurant> OnLoadRestaurant(object source, LocalInfoArgs args)
+        {
+            return restaurants;
         }
 
         public List<Restaurant> Restaurants { get => restaurants; set => restaurants = value; }

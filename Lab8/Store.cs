@@ -11,7 +11,9 @@ namespace Lab8
         private string category;
         public Store(string owner,int id, string schedule,string category):base(owner,id,schedule)
         {
-            this.category = category;
+            this.Category = category;
         }
+
+        public string Category { get => category; set => category = value; }
     }
 }
