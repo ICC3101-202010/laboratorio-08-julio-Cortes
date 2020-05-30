@@ -119,7 +119,6 @@
             // 
             // StorePanel
             // 
-            this.StorePanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
             this.StorePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.StorePanel.ColumnCount = 4;
             this.StorePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -148,7 +147,6 @@
             this.StorePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.15384F));
             this.StorePanel.Size = new System.Drawing.Size(200, 100);
             this.StorePanel.TabIndex = 0;
-            this.StorePanel.Visible = false;
             // 
             // OwnerLableStore
             // 
@@ -260,7 +258,6 @@
             // 
             // RecreationalPanel
             // 
-            this.RecreationalPanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
             this.RecreationalPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RecreationalPanel.ColumnCount = 4;
             this.RecreationalPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -379,7 +376,6 @@
             // 
             // RestaurantPanel
             // 
-            this.RestaurantPanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
             this.RestaurantPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RestaurantPanel.ColumnCount = 4;
             this.RestaurantPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -520,7 +516,6 @@
             // 
             // CinemaPanel
             // 
-            this.CinemaPanel.BackgroundImage = global::Lab8.Properties.Resources.mall1;
             this.CinemaPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CinemaPanel.ColumnCount = 4;
             this.CinemaPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));

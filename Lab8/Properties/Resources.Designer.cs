@@ -63,29 +63,9 @@ namespace Lab8.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bike_with_yellow_wall_min__1_ {
-            get {
-                object obj = ResourceManager.GetObject("bike-with-yellow-wall-min (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mall {
             get {
                 object obj = ResourceManager.GetObject("mall", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mall1 {
-            get {
-                object obj = ResourceManager.GetObject("mall1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

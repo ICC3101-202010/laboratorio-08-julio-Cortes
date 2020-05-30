@@ -43,51 +43,45 @@ namespace Lab8
             RecreationalPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             BasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             AddPanel.Dock= System.Windows.Forms.DockStyle.Fill;
+            AddPanel.Visible = true;
+            BasePanel.Visible = true;
+            StorePanel.Visible = true;
+            CinemaPanel.Visible = true;
+            RestaurantPanel.Visible = true;
+            RecreationalPanel.Visible = true;
+            BasePanel.BringToFront();
         }
 
         private void AddStoreButton_Click(object sender, EventArgs e)
         {
-            StorePanel.Visible = true;
-            CinemaPanel.Visible = false;
-            RestaurantPanel.Visible = false;
-            RecreationalPanel.Visible = false;
+            StorePanel.BringToFront();
+
         }
 
         private void BackButtomAdding_Click(object sender, EventArgs e)
         {
-            AddPanel.Visible = false;
-            BasePanel.Visible = true;
+            BasePanel.BringToFront();
         }
 
         private void AddCinemaButton_Click(object sender, EventArgs e)
         {
-            StorePanel.Visible = false;
-            CinemaPanel.Visible = true;
-            RestaurantPanel.Visible = false;
-            RecreationalPanel.Visible = false;
+            CinemaPanel.BringToFront();
 
         }
 
         private void AddRestaurantButton_Click(object sender, EventArgs e)
         {
-            StorePanel.Visible = false;
-            CinemaPanel.Visible = false;
-            RestaurantPanel.Visible = true;
-            RecreationalPanel.Visible = false;
+            RestaurantPanel.BringToFront();
         }
 
         private void AddRecreationalButton_Click(object sender, EventArgs e)
         {
-            StorePanel.Visible = false;
-            CinemaPanel.Visible = false;
-            RestaurantPanel.Visible = false;
-            RecreationalPanel.Visible = true;
+            RecreationalPanel.BringToFront();
         }
 
         private void AddLocal_ButtonClick(object sender, EventArgs e)
         {
-            AddPanel.Visible = true;
-            BasePanel.Visible = false;
+            AddPanel.BringToFront();
         }
 
         private void FinalAddStore_Click(object sender, EventArgs e)
