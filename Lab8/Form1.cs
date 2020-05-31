@@ -42,7 +42,7 @@ namespace Lab8
             RestaurantPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             RecreationalPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             BasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            AddPanel.Dock= System.Windows.Forms.DockStyle.Fill;
+            AddPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             AddPanel.Visible = true;
             BasePanel.Visible = true;
             StorePanel.Visible = true;
@@ -91,7 +91,7 @@ namespace Lab8
             string schedule = StoreSheduleLabel.Text;
             string category = StoreCategoryLabel.Text;
             bool succes = int.TryParse(StoreIDLabel.Text, out id);
-            if (succes&&id>=1)
+            if (succes && id >= 1)
             {
                 OnFinalAddStore(ownername, id, schedule, category);
             }
@@ -101,11 +101,11 @@ namespace Lab8
             }
         }
 
-        private void OnFinalAddStore(string ownername,int id, string schedule, string category)
+        private void OnFinalAddStore(string ownername, int id, string schedule, string category)
         {
-            if (FinalAddStoreClick!=null)
+            if (FinalAddStoreClick != null)
             {
-                bool result=FinalAddStoreClick(this, new CreateStoreArgs() { ownername = ownername, id = id, schedule = schedule, category = category });
+                bool result = FinalAddStoreClick(this, new CreateStoreArgs() { ownername = ownername, id = id, schedule = schedule, category = category });
                 if (result)
                 {
                     UsedIdStore.Visible = false;
@@ -114,6 +114,7 @@ namespace Lab8
                     StoreSheduleLabel.Text = "";
                     StoreCategoryLabel.Text = "";
                     StoreIDLabel.Text = Text;
+                    BasePanel.BringToFront();
                 }
                 else
                 {
@@ -130,11 +131,12 @@ namespace Lab8
             bool privatet;
             bool succes = int.TryParse(RestaurantIDTextBox.Text, out id);
             bool succes2 = bool.TryParse(RestaurantPrivateTextBox.Text, out privatet);
-            if (succes&&succes2&&id>=0)
+            if (succes && succes2 && id >= 0)
             {
                 OnFinalAddRestaurant(name, id, schedule, privatet);
+
             }
-            else if(succes)
+            else if (succes && id >= 0)
             {
                 RestaurantPrivateTextBox.Text = "Invalid Format, please put [True] or [False] in this box";
             }
@@ -142,10 +144,14 @@ namespace Lab8
             {
                 RestaurantIDTextBox.Text = "Invalid Format, please put a positive number in this box";
             }
+            if (!succes2)
+            {
+                RestaurantPrivateTextBox.Text = "Invalid Format, please put [True] or [False] in this box";
+            }
         }
         private void OnFinalAddRestaurant(string ownername, int id, string schedule, bool privatet)
         {
-            if (FinalAddRestaurantClick!= null)
+            if (FinalAddRestaurantClick != null)
             {
                 bool result = FinalAddRestaurantClick(this, new CreateRestaurantArgs() { ownername = ownername, id = id, schedule = schedule, privatet = privatet });
                 if (result)
@@ -156,6 +162,7 @@ namespace Lab8
                     RestaurantNameTextBox.Text = "";
                     RestaurantPrivateTextBox.Text = "";
                     RestaurantScheduleTextBox.Text = "";
+                    BasePanel.BringToFront();
                 }
                 else
                 {
@@ -172,11 +179,11 @@ namespace Lab8
             int nrooms;
             bool succes = int.TryParse(CinemaIDTextBox.Text, out id);
             bool succes2 = int.TryParse(CinemaNofRoomsLabel.Text, out nrooms);
-            if (succes && succes2&&id>=1&&nrooms>=1)
+            if (succes && succes2 && id >= 1 && nrooms >= 1)
             {
                 OnFinalAddCinema(name, id, schedule, nrooms);
             }
-            else if (succes&& nrooms <= 0)
+            else if (succes && nrooms <= 0)
             {
                 CinemaNofRoomsLabel.Text = "Invalid Format, please put a positive number in this box";
             }
@@ -199,6 +206,7 @@ namespace Lab8
                     CinemaNameTextBox.Text = "";
                     CinemaScheduleTextBox.Text = "";
                     CinemaNofRoomsLabel.Text = "";
+                    BasePanel.BringToFront();
                 }
                 else
                 {
@@ -213,11 +221,11 @@ namespace Lab8
             int id;
             string schedule = RecreationalScheduleTextBox.Text;
             bool succes = int.TryParse(RecreationalIDTextBox.Text, out id);
-            if (succes&&id>=1)
+            if (succes && id >= 1)
             {
                 OnFinalAddRecreational(name, id, schedule);
             }
-            else 
+            else
             {
                 RecreationalIDTextBox.Text = "Invalid Format, please put a positive number in this box";
             }
@@ -236,6 +244,7 @@ namespace Lab8
                     RecreationalNameTextBox.Text = "";
                     RecreationalScheduleTextBox.Text = "";
                     RecreationalIDTextBox.Text = "";
+                    BasePanel.BringToFront();
                 }
                 else
                 {
@@ -246,11 +255,11 @@ namespace Lab8
 
         private void ViewLocals_Click(object sender, EventArgs e)
         {
-            List<Restaurant> restaurants=OnLoadRestaurant();
-            List<Cinema> cinemas= OnLoadCinema();
+            List<Restaurant> restaurants = OnLoadRestaurant();
+            List<Cinema> cinemas = OnLoadCinema();
             List<Recreational> recreationals = OnLoadRecreational();
             List<Store> stores = OnLoadStores();
-            Form2 form2 = new Form2(stores,restaurants, cinemas, recreationals);
+            Form2 form2 = new Form2(stores, restaurants, cinemas, recreationals);
             form2.ShowDialog();
         }
 
@@ -258,7 +267,7 @@ namespace Lab8
         {
             if (LoadRestaurant != null)
             {
-                return LoadRestaurant(this,new LocalInfoArgs());
+                return LoadRestaurant(this, new LocalInfoArgs());
             }
             return null;
         }
